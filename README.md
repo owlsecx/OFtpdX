@@ -18,7 +18,7 @@
 
 ## 📌 Overview
 
-FTP server (vsftpd / ProFTPD / Pure-FTPd) configuration hardening auditor
+OFtpdX — FTP Server Configuration Hardening Auditor. It provides vsftpd — vsftpd.conf, vsftpd.user_list, ftpusers, per-user user_config_dir overrides, anon root, chroot / allow_writeable_chroot, FTPS enforcement, SSLv3 / TLSv1 / ciphers, PORT / PASV promiscuous. Built-in demo/self-test paths and severity gates help validate detections without touching production when those flags are used.
 
 ---
 
@@ -30,7 +30,6 @@ FTP server (vsftpd / ProFTPD / Pure-FTPd) configuration hardening auditor
 - Cert / key permissions, dpkg version EOL, SFTP hint
 - Secrets masked everywhere; --root discovery; CWE + MITRE
 - Export TXT / Markdown / JSON / CSV / SARIF 2.1.0
-- Self-test --demo, CI gates --fail-on / --min-severity
 
 ---
 
@@ -44,7 +43,10 @@ FTP server (vsftpd / ProFTPD / Pure-FTPd) configuration hardening auditor
 ## 🚀 Usage
 
 ```bash
-./OFtpdX
+./OFtpdX                                     # interactive menu
+./OFtpdX --scan -r /path/to/root
+./OFtpdX --demo
+./OFtpdX --help
 ```
 
 ---
